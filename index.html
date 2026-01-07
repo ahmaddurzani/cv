@@ -7,6 +7,9 @@
 
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+
+<!-- ICON CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -15,6 +18,7 @@
 
     <!-- ===== SIDEBAR ===== -->
     <aside class="sidebar">
+
         <div class="profile-img">
             <img src="profilpoto.jpeg" alt="Foto Profil">
         </div>
@@ -27,17 +31,28 @@
             <p>📍 Jakarta, Indonesia</p>
         </div>
 
+        <!-- SOCIAL ICONS -->
         <div class="socials">
-            <a href="https://github.com/ahmaddurzani" target="_blank">GitHub</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Facebook</a>
+            <a href="https://github.com/ahmaddurzani" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
         </div>
+
     </aside>
 
     <!-- ===== MAIN ===== -->
     <main class="main-content">
 
-        <section>
+        <!-- ===== TAB NAVIGATION ===== -->
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab('about')">👤 Tentang Saya</button>
+            <button class="tab-btn" onclick="openTab('portfolio')">🛠️ Portfolio</button>
+            <button class="tab-btn" onclick="openTab('skills')">⭐ Skill</button>
+        </div>
+
+        <!-- ===== TAB CONTENT ===== -->
+        <div id="about" class="tab-content active">
+
             <h2>Tentang Saya</h2>
             <p>
                 Saya adalah Mechanical Engineer di Konsultan Perencana Mechanical & Electrical.
@@ -45,19 +60,74 @@
                 Steam & Condensate System, Compressed Air System, Hydraulic Sprinkler,
                 Perhitungan Tangki Septik, serta AutoCAD AutoLISP Tools.
             </p>
-        </section>
 
-        <section class="section-space">
-            <h2>Pengalaman Profesional</h2>
-            <div class="card">
-                <h3>Mechanical Engineer – Konsultan MEP</h3>
-                <span>2018 – Sekarang</span>
-                <p>
-                    Perencanaan sistem HVAC, Plumbing, Fire Fighting, Steam, dan Compressed Air
-                    untuk proyek gedung industri dan komersial.
-                </p>
+            <div class="section-space">
+                <h2>Pengalaman Profesional</h2>
+
+                <div class="card">
+                    <h3>Mechanical Engineer – Konsultan MEP</h3>
+                    <span>2018 – Sekarang</span>
+                    <p>
+                        Perencanaan HVAC, Plumbing, Fire Fighting, Steam dan Compressed Air
+                        untuk proyek gedung industri dan komersial.
+                    </p>
+                </div>
+
             </div>
-        </section>
+        </div>
 
-        <section class="section-space">
-            <h2>Kea
+        <!-- PORTFOLIO -->
+        <div id="portfolio" class="tab-content">
+
+            <h2>Portfolio Engineering Tools</h2>
+
+            <ul class="portfolio-list">
+                <li>✔ Steam & Condensate System Calculator</li>
+                <li>✔ Compressed Air System Calculator</li>
+                <li>✔ Hydraulic Sprinkler Calculation</li>
+                <li>✔ Perhitungan Tangki Septik</li>
+                <li>✔ AutoCAD AutoLISP Productivity Tools</li>
+            </ul>
+
+        </div>
+
+        <!-- SKILLS -->
+        <div id="skills" class="tab-content">
+
+            <h2>Keahlian</h2>
+
+            <div class="skills-grid">
+                <div class="skill-item">Mechanical Design</div>
+                <div class="skill-item">AutoCAD & AutoLISP</div>
+                <div class="skill-item">Python Engineering Tools</div>
+                <div class="skill-item">HVAC System</div>
+                <div class="skill-item">Fire Fighting System</div>
+                <div class="skill-item">Steam & Compressed Air</div>
+            </div>
+
+        </div>
+
+    </main>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+    Ahmad Durzani | Mechanical Engineer
+</footer>
+
+<!-- ===== SCRIPT TAB ===== -->
+<script>
+function openTab(tabId) {
+    const tabs = document.querySelectorAll('.tab-content');
+    const buttons = document.querySelectorAll('.tab-btn');
+
+    tabs.forEach(tab => tab.classList.remove('active'));
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    document.getElementById(tabId).classList.add('active');
+    event.currentTarget.classList.add('active');
+}
+</script>
+
+</body>
+</html>
