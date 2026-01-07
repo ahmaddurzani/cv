@@ -87,22 +87,31 @@
 }
 
 /* ===== FOOTER ===== */
+.footer-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .site-footer {
-    margin: 30px auto 0;
+    width: 100%;
+    max-width: 1000px;
+    background: rgba(255,255,255,0.9);
+    margin: 20px auto 0;
     padding: 15px 0;
-    border-top: 1px solid #eee;
+    text-align: center;
     font-size: 0.85rem;
     color: #777;
-    max-width: 1000px;          /* samakan dengan container */
-    background: rgba(255,255,255,0.9);
-    border-radius: 0 0 20px 20px;}
+    border-radius: 0 0 20px 20px;
 }
 </style>
 </head>
 
 <body>
 
+<!-- ================= CONTAINER ================= -->
 <div class="container">
+
 <header class="sidebar">
     <div class="profile-img">
         <img src="profilpoto.jpeg" alt="Foto Profil">
@@ -134,13 +143,13 @@
 
 <!-- ===== NAVIGATION ===== -->
 <div class="tabs">
-    <button class="tab-btn active" onclick="openTab('about')">
+    <button class="tab-btn active" onclick="openTab('about', this)">
         <i class="fas fa-user"></i> Tentang Saya
     </button>
-    <button class="tab-btn" onclick="openTab('portfolio')">
+    <button class="tab-btn" onclick="openTab('portfolio', this)">
         <i class="fas fa-gear"></i> Portfolio
     </button>
-    <button class="tab-btn" onclick="openTab('skill')">
+    <button class="tab-btn" onclick="openTab('skill', this)">
         <i class="fas fa-chart-line"></i> Skill
     </button>
 </div>
@@ -194,17 +203,21 @@
             <div class="skill-item">MEP Standards & Codes</div>
         </div>
     </section>
+</div>
 
 </main>
-    
 </div>
+<!-- ================= END CONTAINER ================= -->
+
 <!-- ===== FOOTER ===== -->
-<footer class="site-footer">
-    Ahmad Durzani | Mechanical Engineer
-</footer>
+<div class="footer-wrap">
+    <footer class="site-footer">
+        Ahmad Durzani | Mechanical Engineer
+    </footer>
+</div>
 
 <script>
-function openTab(tabId) {
+function openTab(tabId, el) {
     const tabs = document.querySelectorAll('.tab-content');
     const buttons = document.querySelectorAll('.tab-btn');
 
@@ -212,7 +225,7 @@ function openTab(tabId) {
     buttons.forEach(btn => btn.classList.remove('active'));
 
     document.getElementById(tabId).classList.add('active');
-    event.currentTarget.classList.add('active');
+    el.classList.add('active');
 }
 </script>
 
