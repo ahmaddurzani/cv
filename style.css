@@ -8,14 +8,15 @@ body {
     font-family: 'Montserrat', sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: #333;
+    min-height: 100vh;
+    padding: 30px;
 
     display: flex;
-    flex-direction: column; /* <<< FIX FOOTER KE BAWAH */
+    flex-direction: column;
     align-items: center;
-    min-height: 100vh;
-    padding: 20px;
 }
 
+/* ===== LAYOUT ===== */
 .container {
     display: flex;
     max-width: 1000px;
@@ -36,45 +37,51 @@ body {
 }
 
 .profile-img img {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     border: 4px solid #764ba2;
     margin-bottom: 20px;
+    object-fit: cover;
 }
 
 .tagline {
     font-size: 0.9rem;
     color: #bdc3c7;
-    margin-bottom: 30px;
-}
-
-.contact-info {
-    text-align: left;
-    font-size: 0.85rem;
     margin-bottom: 25px;
 }
 
-.contact-info i {
-    margin-right: 8px;
+.contact-info {
+    font-size: 0.85rem;
+    margin-bottom: 30px;
 }
 
-.social a {
-    color: white;
-    font-size: 22px;
-    margin: 0 10px;
+.contact-info p {
+    margin-bottom: 10px;
+}
+
+.socials a {
+    display: inline-block;
+    margin: 5px 8px;
+    padding: 6px 14px;
+    border: 1px solid #aaa;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    color: #fff;
+    text-decoration: none;
     transition: 0.3s;
 }
 
-.social a:hover {
-    color: #764ba2;
+.socials a:hover {
+    background: #764ba2;
+    border-color: #764ba2;
 }
 
 /* ===== MAIN ===== */
 .main-content {
     padding: 40px;
     width: 65%;
-    background: white;
+    background: #fff;
 }
 
 h2 {
@@ -83,78 +90,20 @@ h2 {
     padding-bottom: 10px;
     margin-bottom: 20px;
     text-transform: uppercase;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+}
+
+.section-space {
+    margin-top: 40px;
 }
 
 .card {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     padding: 15px;
-    border-left: 3px solid #764ba2;
+    border-left: 4px solid #764ba2;
     background: #f9f9f9;
 }
 
-/* ===== NAVIGATION ===== */
-.tabs {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 25px;
-}
-
-.tab-btn {
-    flex: 1;
-    padding: 10px;
-    border: 2px solid #764ba2;
-    background: transparent;
-    cursor: pointer;
-    border-radius: 8px;
-    font-size: 0.85rem;
-    transition: 0.3s;
-}
-
-.tab-btn i {
-    margin-right: 6px;
-}
-
-.tab-btn:hover {
-    background: #764ba2;
-    color: white;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.tab-btn.active {
-    background: #764ba2;
-    color: white;
-}
-
-/* ===== TAB CONTENT ===== */
-.tab-content {
-    display: none;
-}
-
-.tab-content.active {
-    display: block;
-}
-
-/* ===== ANIMATION ===== */
-.fade {
-    animation: fadeIn 0.6s ease-in-out;
-}
-
-.slide {
-    animation: slideIn 0.6s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-@keyframes slideIn {
-    from {transform: translateX(30px); opacity: 0;}
-    to {transform: translateX(0); opacity: 1;}
-}
-
-/* ===== SKILLS ===== */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -164,8 +113,8 @@ h2 {
 .skill-item {
     background: #764ba2;
     color: white;
-    padding: 8px 15px;
-    border-radius: 5px;
+    padding: 8px 12px;
+    border-radius: 6px;
     font-size: 0.8rem;
     text-align: center;
 }
@@ -173,8 +122,9 @@ h2 {
 /* ===== FOOTER ===== */
 .site-footer {
     margin-top: 20px;
-    color: white;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+    color: #eee;
+    text-align: center;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -183,7 +133,8 @@ h2 {
         flex-direction: column;
     }
 
-    .sidebar, .main-content {
+    .sidebar,
+    .main-content {
         width: 100%;
     }
 }
