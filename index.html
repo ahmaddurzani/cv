@@ -1,131 +1,176 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmad Durzani | Mechanical Engineer Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<title>Ahmad Durzani | Mechanical Engineer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+/* ===== NAVIGATION TABS ===== */
+.tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    flex: 1;
+    border: 2px solid #764ba2;
+    background: transparent;
+    padding: 12px 15px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #764ba2;
+    transition: all 0.3s ease;
+}
+
+.tab-btn i {
+    margin-right: 8px;
+}
+
+.tab-btn:hover {
+    background: #764ba2;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(118,75,162,0.35);
+}
+
+.tab-btn.active {
+    background: linear-gradient(135deg,#667eea,#764ba2);
+    color: white;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* ===== TAB CONTENT ANIMATION ===== */
+.tab-content {
+    display: none;
+    animation: fadeSlide 0.5s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+</style>
 </head>
+
 <body>
 
 <div class="container">
+<header class="sidebar">
+    <div class="profile-img">
+        <img src="profilpoto.jpeg" alt="Foto Profil">
+    </div>
+    <h1>Ahmad Durzani</h1>
+    <p class="tagline">Mechanical Engineer | MEP Consultant</p>
 
-    <!-- SIDEBAR -->
-    <header class="sidebar">
-        <div class="profile-img">
-            <img src="profilpoto.jpeg" alt="Foto Profil">
-        </div>
+    <div class="contact-info">
+        <p>📧 ahmad.durzani@gmail.com</p>
+        <p>📱 +62 813 8137 0813</p>
+        <p>📍 Jakarta, Indonesia</p>
+    </div>
 
-        <h1>Ahmad Durzani</h1>
-        <p class="tagline">
-            Mechanical Engineer <br>
-            MEP Consultant | Engineering Automation
+    <div class="socials">
+        <a href="https://github.com/ahmaddurzani" target="_blank">GitHub</a>
+    </div>
+</header>
+
+<main class="main-content">
+
+<!-- ===== NAVIGATION ===== -->
+<div class="tabs">
+    <button class="tab-btn active" onclick="openTab('about')">
+        <i class="fas fa-user"></i> Tentang Saya
+    </button>
+    <button class="tab-btn" onclick="openTab('portfolio')">
+        <i class="fas fa-gear"></i> Portfolio
+    </button>
+    <button class="tab-btn" onclick="openTab('skill')">
+        <i class="fas fa-chart-line"></i> Skill
+    </button>
+</div>
+
+<!-- ===== ABOUT ===== -->
+<div id="about" class="tab-content active">
+    <section>
+        <h2>Tentang Saya</h2>
+        <p>
+            Saya adalah Mechanical Engineer di perusahaan Konsultan Perencana Mechanical & Electrical.
+            IT merupakan hobi yang berkembang menjadi produktivitas nyata, melahirkan berbagai aplikasi
+            perhitungan teknik untuk mendukung efisiensi desain dan analisa engineering.
         </p>
 
-        <div class="contact-info">
-            <p>📧 ahmad.durzani@gmail.com</p>
-            <p>📱 +62 813 8137 0813</p>
-            <p>📍 Jakarta, Indonesia</p>
-            <p>🌐 GitHub: github.com/ahmaddurzani</p>
-        </div>
-
-        <div class="socials">
-            <a href="https://github.com/ahmaddurzani" target="_blank">GitHub</a>
-        </div>
-    </header>
-
-    <!-- MAIN CONTENT -->
-    <main class="main-content">
-
-        <!-- ABOUT -->
-        <section>
-            <h2>Tentang Saya</h2>
+        <h2>Pengalaman Profesional</h2>
+        <div class="card">
+            <h3>Mechanical Engineer – MEP Consultant</h3>
+            <span>2018 – Sekarang</span>
             <p>
-                Saya adalah Mechanical Engineer yang bekerja pada perusahaan Konsultan Perencana 
-                Mechanical & Electrical (MEP). IT merupakan hobi yang berkembang menjadi berbagai 
-                aplikasi perhitungan teknik untuk meningkatkan efisiensi desain, akurasi engineering, 
-                dan produktivitas kerja.
+                Menangani desain sistem HVAC, plumbing, fire fighting, compressed air, steam system,
+                serta pengembangan tools perhitungan internal berbasis Python dan AutoLISP.
             </p>
-        </section>
-
-        <!-- EXPERIENCE -->
-        <section>
-            <h2>Pengalaman Profesional</h2>
-
-            <div class="card">
-                <h3>Mechanical Engineer – MEP Consultant</h3>
-                <span>Aktif</span>
-                <p>
-                    Terlibat dalam perencanaan sistem mekanikal bangunan meliputi HVAC, plumbing, 
-                    fire fighting, compressed air, serta sistem utilitas lainnya. 
-                    Bertanggung jawab pada perhitungan teknis, spesifikasi peralatan, dan koordinasi desain.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Engineering Automation Developer (Personal Project)</h3>
-                <span>Ongoing</span>
-                <p>
-                    Mengembangkan aplikasi desktop berbasis Python dan AutoCAD AutoLISP 
-                    untuk mempercepat proses perhitungan, drafting, dan standarisasi engineering.
-                </p>
-            </div>
-
-        </section>
-
-        <!-- PORTFOLIO -->
-        <section>
-            <h2>Portfolio Engineering Tools</h2>
-
-            <div class="card">
-                <h3>Steam & Condensate System Calculator</h3>
-                <p>Perhitungan kapasitas boiler, sizing pipa steam & condensate, dan utilitas pendukung.</p>
-            </div>
-
-            <div class="card">
-                <h3>Compressed Air System Calculator</h3>
-                <p>Analisis kapasitas compressor, distribusi jaringan pipa, dan pressure drop.</p>
-            </div>
-
-            <div class="card">
-                <h3>Hydraulic Calculation – Sprinkler System</h3>
-                <p>Perhitungan debit, head loss, dan kebutuhan pompa sistem fire fighting.</p>
-            </div>
-
-            <div class="card">
-                <h3>Septic Tank Design Calculator</h3>
-                <p>Perhitungan volume tangki, kapasitas pengguna, dan waktu tinggal.</p>
-            </div>
-
-            <div class="card">
-                <h3>AutoCAD AutoLISP Productivity Tools</h3>
-                <p>Automasi drafting, manipulasi teks, layer management, dan workflow efficiency.</p>
-            </div>
-
-            <p><em>*Source code tidak dipublikasikan karena digunakan untuk kebutuhan internal.</em></p>
-
-        </section>
-
-        <!-- SKILLS -->
-        <section>
-            <h2>Keahlian</h2>
-            <div class="skills-grid">
-                <div class="skill-item">Mechanical Engineering</div>
-                <div class="skill-item">MEP Design</div>
-                <div class="skill-item">Steam System</div>
-                <div class="skill-item">Compressed Air</div>
-                <div class="skill-item">Fire Fighting</div>
-                <div class="skill-item">Hydraulic Calculation</div>
-                <div class="skill-item">Python Automation</div>
-                <div class="skill-item">AutoCAD AutoLISP</div>
-                <div class="skill-item">Excel Engineering</div>
-                <div class="skill-item">Technical Documentation</div>
-            </div>
-        </section>
-
-    </main>
+        </div>
+    </section>
 </div>
+
+<!-- ===== PORTFOLIO ===== -->
+<div id="portfolio" class="tab-content">
+    <section>
+        <h2>Portfolio Engineering Tools</h2>
+        <div class="card">⚙ Steam & Condensate System Calculator</div>
+        <div class="card">💨 Compressed Air System Calculator</div>
+        <div class="card">🔥 Hydraulic Calculation Sprinkler</div>
+        <div class="card">🚰 Septic Tank Calculation</div>
+        <div class="card">📐 AutoCAD AutoLISP Productivity Tools</div>
+    </section>
+</div>
+
+<!-- ===== SKILL ===== -->
+<div id="skill" class="tab-content">
+    <section>
+        <h2>Keahlian</h2>
+        <div class="skills-grid">
+            <div class="skill-item">Mechanical Design</div>
+            <div class="skill-item">HVAC System</div>
+            <div class="skill-item">Fire Fighting System</div>
+            <div class="skill-item">Plumbing System</div>
+            <div class="skill-item">Python Engineering Tools</div>
+            <div class="skill-item">AutoCAD & AutoLISP</div>
+            <div class="skill-item">Excel Engineering Calculation</div>
+            <div class="skill-item">MEP Standards & Codes</div>
+        </div>
+    </section>
+</div>
+
+</main>
+</div>
+
+<script>
+function openTab(tabId) {
+    const tabs = document.querySelectorAll('.tab-content');
+    const buttons = document.querySelectorAll('.tab-btn');
+
+    tabs.forEach(tab => tab.classList.remove('active'));
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    document.getElementById(tabId).classList.add('active');
+    event.currentTarget.classList.add('active');
+}
+</script>
 
 </body>
 </html>
