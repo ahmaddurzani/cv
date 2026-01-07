@@ -205,6 +205,8 @@ h2 {
     border-top: 1px solid #eee;
     background: #fafafa;
     border-radius: 0 0 12px 12px;
+    width: 100%;              /* PASTI full-width di desktop */
+    box-sizing: border-box;    /* pastikan padding dihitung */
 }
 
 /* RESPONSIVE */
