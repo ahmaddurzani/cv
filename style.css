@@ -27,11 +27,33 @@ body {
 
 /* SIDEBAR */
 .sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* konten atas + footer di bawah */
     width: 32%;
     background: #2c3e50;
     color: white;
     padding: 40px 30px;
+}
+
+.sidebar-footer {
     text-align: center;
+    font-size: 0.75rem;
+    color: #aaa;
+}
+
+.sidebar-footer .social-footer {
+    margin-top: 10px;
+}
+
+.sidebar-footer .social-footer a {
+    margin: 0 6px;
+    color: white;
+    transition: 0.3s;
+}
+
+.sidebar-footer .social-footer a:hover {
+    color: #764ba2;
 }
 
 .profile-img img {
