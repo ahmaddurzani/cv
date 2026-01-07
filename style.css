@@ -8,8 +8,9 @@ body {
     font-family: 'Montserrat', sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: #333;
+
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* <<< FIX FOOTER KE BAWAH */
     align-items: center;
     min-height: 100vh;
     padding: 20px;
@@ -19,13 +20,13 @@ body {
     display: flex;
     max-width: 1000px;
     width: 100%;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 }
 
-/* Sidebar Styling */
+/* ===== SIDEBAR ===== */
 .sidebar {
     background: #2c3e50;
     color: white;
@@ -51,14 +52,25 @@ body {
 .contact-info {
     text-align: left;
     font-size: 0.85rem;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
-.contact-info p {
-    margin-bottom: 10px;
+.contact-info i {
+    margin-right: 8px;
 }
 
-/* Main Content Styling */
+.social a {
+    color: white;
+    font-size: 22px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.social a:hover {
+    color: #764ba2;
+}
+
+/* ===== MAIN ===== */
 .main-content {
     padding: 40px;
     width: 65%;
@@ -69,7 +81,6 @@ h2 {
     color: #764ba2;
     border-bottom: 2px solid #eee;
     padding-bottom: 10px;
-    margin-top: 40px;   
     margin-bottom: 20px;
     text-transform: uppercase;
     font-size: 1.2rem;
@@ -82,6 +93,68 @@ h2 {
     background: #f9f9f9;
 }
 
+/* ===== NAVIGATION ===== */
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #764ba2;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.tab-btn i {
+    margin-right: 6px;
+}
+
+.tab-btn:hover {
+    background: #764ba2;
+    color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.tab-btn.active {
+    background: #764ba2;
+    color: white;
+}
+
+/* ===== TAB CONTENT ===== */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* ===== ANIMATION ===== */
+.fade {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.slide {
+    animation: slideIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideIn {
+    from {transform: translateX(30px); opacity: 0;}
+    to {transform: translateX(0); opacity: 1;}
+}
+
+/* ===== SKILLS ===== */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -97,11 +170,19 @@ h2 {
     text-align: center;
 }
 
-/* Responsif untuk HP */
+/* ===== FOOTER ===== */
+.site-footer {
+    margin-top: 20px;
+    color: white;
+    font-size: 0.85rem;
+}
+
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
     }
+
     .sidebar, .main-content {
         width: 100%;
     }
