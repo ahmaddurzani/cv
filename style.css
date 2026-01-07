@@ -71,7 +71,9 @@ body {
     font-size: 0.9rem;
     color: #bdc3c7;
     margin: 10px 0 25px;
+    text-align: center; /* ini yang bikin tagline center */
 }
+
 
 .contact-info i {
     margin-right: 8px;
