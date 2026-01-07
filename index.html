@@ -5,219 +5,105 @@
 <title>Ahmad Durzani | Mechanical Engineer</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome Icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
 <link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-/* ===== NAVIGATION TABS ===== */
-.tabs {
-    display: flex;
-    gap: 12px;
-    margin-bottom: 30px;
-}
-
-.tab-btn {
-    flex: 1;
-    border: 2px solid #764ba2;
-    background: transparent;
-    padding: 12px 15px;
-    border-radius: 10px;
-    font-weight: 600;
-    cursor: pointer;
-    color: #764ba2;
-    transition: all 0.3s ease;
-}
-
-.tab-btn i {
-    margin-right: 8px;
-}
-
-.tab-btn:hover {
-    background: #764ba2;
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 18px rgba(118,75,162,0.35);
-}
-
-.tab-btn.active {
-    background: linear-gradient(135deg,#667eea,#764ba2);
-    color: white;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-}
-
-/* ===== TAB CONTENT ANIMATION ===== */
-.tab-content {
-    display: none;
-    animation: fadeSlide 0.5s ease;
-}
-
-.tab-content.active {
-    display: block;
-}
-
-@keyframes fadeSlide {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ===== SOCIAL ICONS SIDEBAR ===== */
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 18px;
-    margin-top: 25px;
-}
-
-.social-icons a {
-    color: #bdc3c7;
-    font-size: 1.4rem;
-    transition: 0.3s ease;
-}
-
-.social-icons a:hover {
-    color: #ffffff;
-    transform: translateY(-3px);
-}
-
-/* ===== FOOTER ===== */
-.footer-wrap {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.site-footer {
-    width: 100%;
-    max-width: 1000px;
-    background: rgba(255,255,255,0.9);
-    margin: 20px auto 0;
-    padding: 15px 0;
-    text-align: center;
-    font-size: 0.85rem;
-    color: #777;
-    border-radius: 0 0 20px 20px;
-}
-</style>
 </head>
 
 <body>
 
-<!-- ================= CONTAINER ================= -->
 <div class="container">
 
-<header class="sidebar">
-    <div class="profile-img">
-        <img src="profilpoto.jpeg" alt="Foto Profil">
-    </div>
-    <h1>Ahmad Durzani</h1>
-    <p class="tagline">Mechanical Engineer | MEP Consultant</p>
-
-    <div class="contact-info">
-        <p>📧 ahmad.durzani@gmail.com</p>
-        <p>📱 +62 813 8137 0813</p>
-        <p>📍 Jakarta, Indonesia</p>
-    </div>
-
-    <!-- SOCIAL ICONS -->
-    <div class="social-icons">
-        <a href="https://github.com/ahmaddurzani" target="_blank" title="GitHub">
-            <i class="fab fa-github"></i>
-        </a>
-        <a href="https://facebook.com/" target="_blank" title="Facebook">
-            <i class="fab fa-facebook"></i>
-        </a>
-        <a href="https://linkedin.com/" target="_blank" title="LinkedIn">
-            <i class="fab fa-linkedin"></i>
-        </a>
-    </div>
-</header>
-
-<main class="main-content">
-
-<!-- ===== NAVIGATION ===== -->
-<div class="tabs">
-    <button class="tab-btn active" onclick="openTab('about', this)">
-        <i class="fas fa-user"></i> Tentang Saya
-    </button>
-    <button class="tab-btn" onclick="openTab('portfolio', this)">
-        <i class="fas fa-gear"></i> Portfolio
-    </button>
-    <button class="tab-btn" onclick="openTab('skill', this)">
-        <i class="fas fa-chart-line"></i> Skill
-    </button>
-</div>
-
-<!-- ===== ABOUT ===== -->
-<div id="about" class="tab-content active">
-    <section>
-        <h2>Tentang Saya</h2>
-        <p>
-            Saya adalah Mechanical Engineer di perusahaan Konsultan Perencana Mechanical & Electrical.
-            IT merupakan hobi yang berkembang menjadi produktivitas nyata, melahirkan berbagai aplikasi
-            perhitungan teknik untuk mendukung efisiensi desain dan analisa engineering.
-        </p>
-
-        <h2>Pengalaman Profesional</h2>
-        <div class="card">
-            <h3>Mechanical Engineer – MEP Consultant</h3>
-            <span>2018 – Sekarang</span>
-            <p>
-                Menangani desain sistem HVAC, plumbing, fire fighting, compressed air, steam system,
-                serta pengembangan tools perhitungan internal berbasis Python dan AutoLISP.
-            </p>
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="sidebar">
+        <div class="profile-img">
+            <img src="https://avatars.githubusercontent.com/u/1?v=4" alt="Profile">
         </div>
-    </section>
-</div>
 
-<!-- ===== PORTFOLIO ===== -->
-<div id="portfolio" class="tab-content">
-    <section>
-        <h2>Portfolio Engineering Tools</h2>
-        <div class="card">⚙ Steam & Condensate System Calculator</div>
-        <div class="card">💨 Compressed Air System Calculator</div>
-        <div class="card">🔥 Hydraulic Calculation Sprinkler</div>
-        <div class="card">🚰 Septic Tank Calculation</div>
-        <div class="card">📐 AutoCAD AutoLISP Productivity Tools</div>
-    </section>
-</div>
+        <h1>Ahmad Durzani</h1>
+        <p class="tagline">Mechanical Engineer | Engineering Tools Developer</p>
 
-<!-- ===== SKILL ===== -->
-<div id="skill" class="tab-content">
-    <section>
-        <h2>Keahlian</h2>
-        <div class="skills-grid">
-            <div class="skill-item">Mechanical Design</div>
-            <div class="skill-item">HVAC System</div>
-            <div class="skill-item">Fire Fighting System</div>
-            <div class="skill-item">Plumbing System</div>
-            <div class="skill-item">Python Engineering Tools</div>
-            <div class="skill-item">AutoCAD & AutoLISP</div>
-            <div class="skill-item">Excel Engineering Calculation</div>
-            <div class="skill-item">MEP Standards & Codes</div>
+        <div class="contact-info">
+            <p><i class="fa-solid fa-envelope"></i> ahmaddurzani@gmail.com</p>
+            <p><i class="fa-solid fa-globe"></i> ahmaddurzani.github.io</p>
         </div>
-    </section>
-</div>
 
-</main>
+        <!-- SOCIAL ICON -->
+        <div class="social">
+            <a href="https://github.com/ahmaddurzani" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </aside>
+
+    <!-- ===== MAIN ===== -->
+    <main class="main-content">
+
+        <!-- ===== NAVIGATION ===== -->
+        <nav class="tabs">
+            <button class="tab-btn active" onclick="showTab('about')">
+                <i class="fa-solid fa-user"></i> Tentang Saya
+            </button>
+            <button class="tab-btn" onclick="showTab('portfolio')">
+                <i class="fa-solid fa-briefcase"></i> Portfolio
+            </button>
+            <button class="tab-btn" onclick="showTab('skills')">
+                <i class="fa-solid fa-star"></i> Skill
+            </button>
+        </nav>
+
+        <!-- ===== ABOUT ===== -->
+        <section id="about" class="tab-content active fade">
+            <h2>Tentang Saya</h2>
+            <div class="card">
+                Saya adalah Mechanical Engineer di Konsultan Perencana Mechanical & Electrical. 
+                IT merupakan hobi yang berkembang menjadi berbagai aplikasi perhitungan teknik.
+            </div>
+
+            <h2 style="margin-top:40px;">Pengalaman Profesional</h2>
+            <div class="card">
+                Berpengalaman dalam desain sistem mekanikal gedung, perhitungan engineering tools, 
+                automation AutoCAD AutoLISP, serta pengembangan aplikasi berbasis Python.
+            </div>
+        </section>
+
+        <!-- ===== PORTFOLIO ===== -->
+        <section id="portfolio" class="tab-content slide">
+            <h2>Portfolio Engineering Tools</h2>
+            <div class="card">✔ Steam & Condensate System Calculator</div>
+            <div class="card">✔ Compressed Air System Calculator</div>
+            <div class="card">✔ Hydraulic Calculation Sprinkler</div>
+            <div class="card">✔ Septic Tank Design Calculator</div>
+            <div class="card">✔ AutoCAD AutoLISP Productivity Tools</div>
+        </section>
+
+        <!-- ===== SKILLS ===== -->
+        <section id="skills" class="tab-content fade">
+            <h2>Keahlian</h2>
+            <div class="skills-grid">
+                <div class="skill-item">Mechanical Design</div>
+                <div class="skill-item">HVAC System</div>
+                <div class="skill-item">Python</div>
+                <div class="skill-item">AutoLISP</div>
+                <div class="skill-item">AutoCAD</div>
+                <div class="skill-item">Engineering Calculation</div>
+            </div>
+        </section>
+
+    </main>
 </div>
-<!-- ================= END CONTAINER ================= -->
 
 <!-- ===== FOOTER ===== -->
-<div class="footer-wrap">
-    <footer class="site-footer">
-        Ahmad Durzani | Mechanical Engineer
-    </footer>
-</div>
+<footer class="site-footer">
+    Ahmad Durzani | Mechanical Engineer
+</footer>
 
 <script>
-function openTab(tabId, el) {
+function showTab(tabId) {
     const tabs = document.querySelectorAll('.tab-content');
     const buttons = document.querySelectorAll('.tab-btn');
 
@@ -225,7 +111,7 @@ function openTab(tabId, el) {
     buttons.forEach(btn => btn.classList.remove('active'));
 
     document.getElementById(tabId).classList.add('active');
-    el.classList.add('active');
+    event.target.classList.add('active');
 }
 </script>
 
