@@ -255,8 +255,14 @@ h2 {
         width: 100%;
     }
     .tabs {
-        flex-direction: column;
+        flex-direction: row; /* sebelumnya column */
+        flex-wrap: wrap;     /* biar tombol tetap rapih jika layar sempit */
+        display: flex;
+        gap: 12px;
+        margin-bottom: 30px;
+        justify-content: center; /* center horizontal */
     }
+
     .skills-grid {
         grid-template-columns: 1fr;
     }
