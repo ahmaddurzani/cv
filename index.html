@@ -66,6 +66,35 @@
         transform: translateY(0);
     }
 }
+
+/* ===== SOCIAL ICONS SIDEBAR ===== */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 25px;
+}
+
+.social-icons a {
+    color: #bdc3c7;
+    font-size: 1.4rem;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    font-size: 0.85rem;
+    color: #777;
+}
 </style>
 </head>
 
@@ -85,8 +114,17 @@
         <p>📍 Jakarta, Indonesia</p>
     </div>
 
-    <div class="socials">
-        <a href="https://github.com/ahmaddurzani" target="_blank">GitHub</a>
+    <!-- SOCIAL ICONS -->
+    <div class="social-icons">
+        <a href="https://github.com/ahmaddurzani" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i>
+        </a>
+        <a href="https://facebook.com/" target="_blank" title="Facebook">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://linkedin.com/" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+        </a>
     </div>
 </header>
 
@@ -157,6 +195,12 @@
 </div>
 
 </main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+    Ahmad Durzani | Mechanical Engineer
+</footer>
+
 </div>
 
 <script>
