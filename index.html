@@ -2,16 +2,11 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Ahmad Durzani | Mechanical Engineer</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<!-- Font Awesome Icon -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<title>Ahmad Durzani | Mechanical Engineer</title>
 
 <link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -21,99 +16,48 @@
     <!-- ===== SIDEBAR ===== -->
     <aside class="sidebar">
         <div class="profile-img">
-            <img src="https://avatars.githubusercontent.com/u/1?v=4" alt="Profile">
+            <img src="profilpoto.jpeg" alt="Foto Profil">
         </div>
 
         <h1>Ahmad Durzani</h1>
         <p class="tagline">Mechanical Engineer | Engineering Tools Developer</p>
 
         <div class="contact-info">
-            <p><i class="fa-solid fa-envelope"></i> ahmaddurzani@gmail.com</p>
-            <p><i class="fa-solid fa-globe"></i> ahmaddurzani.github.io</p>
+            <p>📧 ahmad.durzani@gmail.com</p>
+            <p>📍 Jakarta, Indonesia</p>
         </div>
 
-        <!-- SOCIAL ICON -->
-        <div class="social">
-            <a href="https://github.com/ahmaddurzani" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
+        <div class="socials">
+            <a href="https://github.com/ahmaddurzani" target="_blank">GitHub</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Facebook</a>
         </div>
     </aside>
 
     <!-- ===== MAIN ===== -->
     <main class="main-content">
 
-        <!-- ===== NAVIGATION ===== -->
-        <nav class="tabs">
-            <button class="tab-btn active" onclick="showTab('about')">
-                <i class="fa-solid fa-user"></i> Tentang Saya
-            </button>
-            <button class="tab-btn" onclick="showTab('portfolio')">
-                <i class="fa-solid fa-briefcase"></i> Portfolio
-            </button>
-            <button class="tab-btn" onclick="showTab('skills')">
-                <i class="fa-solid fa-star"></i> Skill
-            </button>
-        </nav>
-
-        <!-- ===== ABOUT ===== -->
-        <section id="about" class="tab-content active fade">
+        <section>
             <h2>Tentang Saya</h2>
+            <p>
+                Saya adalah Mechanical Engineer di Konsultan Perencana Mechanical & Electrical.
+                IT merupakan hobi yang melahirkan berbagai aplikasi perhitungan engineering seperti
+                Steam & Condensate System, Compressed Air System, Hydraulic Sprinkler,
+                Perhitungan Tangki Septik, serta AutoCAD AutoLISP Tools.
+            </p>
+        </section>
+
+        <section class="section-space">
+            <h2>Pengalaman Profesional</h2>
             <div class="card">
-                Saya adalah Mechanical Engineer di Konsultan Perencana Mechanical & Electrical. 
-                IT merupakan hobi yang berkembang menjadi berbagai aplikasi perhitungan teknik.
-            </div>
-
-            <h2 style="margin-top:40px;">Pengalaman Profesional</h2>
-            <div class="card">
-                Berpengalaman dalam desain sistem mekanikal gedung, perhitungan engineering tools, 
-                automation AutoCAD AutoLISP, serta pengembangan aplikasi berbasis Python.
+                <h3>Mechanical Engineer – Konsultan MEP</h3>
+                <span>2018 – Sekarang</span>
+                <p>
+                    Perencanaan sistem HVAC, Plumbing, Fire Fighting, Steam, dan Compressed Air
+                    untuk proyek gedung industri dan komersial.
+                </p>
             </div>
         </section>
 
-        <!-- ===== PORTFOLIO ===== -->
-        <section id="portfolio" class="tab-content slide">
-            <h2>Portfolio Engineering Tools</h2>
-            <div class="card">✔ Steam & Condensate System Calculator</div>
-            <div class="card">✔ Compressed Air System Calculator</div>
-            <div class="card">✔ Hydraulic Calculation Sprinkler</div>
-            <div class="card">✔ Septic Tank Design Calculator</div>
-            <div class="card">✔ AutoCAD AutoLISP Productivity Tools</div>
-        </section>
-
-        <!-- ===== SKILLS ===== -->
-        <section id="skills" class="tab-content fade">
-            <h2>Keahlian</h2>
-            <div class="skills-grid">
-                <div class="skill-item">Mechanical Design</div>
-                <div class="skill-item">HVAC System</div>
-                <div class="skill-item">Python</div>
-                <div class="skill-item">AutoLISP</div>
-                <div class="skill-item">AutoCAD</div>
-                <div class="skill-item">Engineering Calculation</div>
-            </div>
-        </section>
-
-    </main>
-</div>
-
-<!-- ===== FOOTER ===== -->
-<footer class="site-footer">
-    Ahmad Durzani | Mechanical Engineer
-</footer>
-
-<script>
-function showTab(tabId) {
-    const tabs = document.querySelectorAll('.tab-content');
-    const buttons = document.querySelectorAll('.tab-btn');
-
-    tabs.forEach(tab => tab.classList.remove('active'));
-    buttons.forEach(btn => btn.classList.remove('active'));
-
-    document.getElementById(tabId).classList.add('active');
-    event.target.classList.add('active');
-}
-</script>
-
-</body>
-</html>
+        <section class="section-space">
+            <h2>Kea
