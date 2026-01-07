@@ -33,8 +33,10 @@ body {
     padding: 40px 30px;
 
     display: flex;
-    flex-direction: column; /* konten vertikal */
+    flex-direction: column;  /* konten vertikal */
+    align-items: center;     /* semua konten center horizontal */
 }
+
 
 
 .sidebar-footer {
